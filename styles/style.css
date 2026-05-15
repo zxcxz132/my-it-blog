@@ -1,0 +1,211 @@
+.img-wrap img {
+    margin-right: 20px;
+    width: 450px;
+    border-radius: 15px;
+}
+
+.img-wrap {
+    overflow: auto; /*между картинками и текстами появляется пространство */
+    margin: 20px 0;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+body {
+/* Задаёт шрифт для всего текста на странице. 
+       Браузер идёт по списку слева направо и использует первый доступный шрифт.
+       'Segoe UI' - шрифт Windows, Tahoma - запасной, дальше стандартные */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Максимальная ширина контента - 1000 пикселей.
+       Если экран шире - по бокам будет пустое пространство.
+       Если уже - страница сжимается */
+    max-width: 1000px;
+    
+    /* Внешний отступ: 0 (сверху/снизу) и auto (слева/справа).
+       auto по горизонтали центрирует блок на экране */
+    margin: 0 auto;
+       
+    /* Создаёт "воздух" между содержимым и краями страницы */
+    padding: 20px;
+    
+    /* Цвет фона всей страницы. Светло-серый (#eee = rgb(238,238,238)).
+       Этот цвет будет виден везде, где нет других фоновых элементов */
+    background-color: #eee;
+    
+    /* Основной цвет текста на странице. Тёмно-синий (почти чёрный).
+       Наследуется всеми элементами внутри body, если не переопределён */
+    color: #1a1a2e;
+}
+
+h1 {
+    /* Цвет текста заголовка. Очень тёмный сине-зелёный оттенок */
+    color: #091b1e;
+    
+    /* Выравнивание текста по центру. Текст будет посередине */
+    text-align: center;
+    
+    /* Фон заголовка - белый.
+       Перекрывает фон body только в области заголовка */
+    background: white;
+    
+    /* Внутренний отступ СНИЗУ - 10 пикселей.
+       Создаёт расстояние между текстом и нижней границей */
+    padding-bottom: 10px;
+    
+    /* Внутренний отступ СВЕРХУ - 10 пикселей.
+       Создаёт расстояние между верхней границей и текстом */
+    padding-top: 10px;
+}
+h2 {
+    /* Цвет текста. Тёмный сине-зелёный (более насыщенный, чем у h1) */
+    color: #00434f;
+    
+    /* Внешний отступ СВЕРХУ - 30 пикселей.
+       Увеличивает расстояние между h2 и предыдущим элементом */
+    margin-top: 30px;
+    
+    /* Левая граница (рамка) шириной 5 пикселей, сплошная, синего цвета.
+       Создаёт вертикальную полоску слева от заголовка */
+    border-left: 5px solid #006dff;
+    
+    /* Внутренний отступ СЛЕВА - 15 пикселей.
+       Отодвигает текст от левой границы (чтобы не прилипал к полоске) */
+    padding-left: 15px;
+}
+h3 {
+    /* Цвет текста. Фиолетовый оттенок.
+       Отличается от h1 и h2 - помогает визуально разделять уровни заголовков */
+    color: #421682;
+}
+table {
+    width: 100%;
+}
+
+.highlight {
+    background-color: #e94560;
+    padding: 3px 8px;
+    border-radius: 5px;
+    color: white;
+}
+/* ========== БЛОЧНАЯ МОДЕЛЬ ========== */
+
+.block-demo {
+    display: flex;           /* располагаем блоки в ряд блоки идут горизонтально а не в вкертикально*/
+    gap: 10px;              /* расстояние между блоками */
+    flex-wrap: wrap;        /* если не влезают — переносим */
+    margin: 30px 0;
+}
+
+.box {
+    background-color: #16213e;   /* тёмно-синий фон */
+    color: #eee;
+    border-radius: 15px;         /* скруглённые углы */
+    width: 250px;                /* фиксированная ширина */
+}
+
+.box h3{
+    color: #eee;
+}
+
+/* БЛОК 1 — стандартные отступы */
+.box-1 {
+    margin: 20px;        /* внешние отступы со всех сторон */
+    padding: 10px;       /* внутренние отступы со всех сторон  и они отличаются тем что одни выступы паддинг внутренние а марджин внешние от других блоков*/
+    background-color: #1da355;
+}
+
+/* БЛОК 2 — большой внутренний отступ */
+.box-2 {
+    margin: 10px;
+    padding: 25px;
+    background-color: #0e854d;
+}
+
+/* БЛОК 3 — разные отступы: margin: верх/низ | право/лево */
+.box-3 {
+    margin: 30px 10px;   /* верх/низ = 30px, право/лево = 10px */
+    padding: 5px 20px;   /* верх/низ = 5px, право/лево = 20px */
+    background-color: #097420;
+}
+/* ========== ID, CLASS и :hover ========== */
+
+.interactive-demo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: #e9efff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    transition: all 2s ease;  /* Плавная анимация (0.3 секунды) все анимации блоков*/
+    border: 2px solid transparent; /* прозрачная рамка (запас для эффекта 3) */
+}
+
+/* УНИКАЛЬНЫЙ ЭЛЕМЕНТ с id="special-card" */
+#special-card {
+    background: linear-gradient(135deg, #ecb1ff, #54b5ffa6);
+    border: 2px solid #00d8ff;
+}
+
+#special-card:hover {
+    background: linear-gradient(135deg, #96d2ffa6, #ecb1ff);
+    transform: scale(1.02);  /* легкое увеличение */
+    box-shadow: 0 10px 25px rgba(0,216,255,0.3);
+}
+
+/* ЭФФЕКТ 1: увеличение */
+.hover-effect-1:hover {
+    transform: scale(1.05);
+    background-color: #78c2ff;
+}
+
+/* ЭФФЕКТ 2: смена фона и тень */
+.hover-effect-2:hover {
+    background-color: #ff8dd3;
+    box-shadow: 0 8px 20px rgba(233,69,96,0.4);
+    color: white;
+}
+
+/* ЭФФЕКТ 3: появление неоновой рамки */
+.hover-effect-3:hover {
+    border-color: #00d8ff;
+    box-shadow: 0 0 15px #00d8ff;
+    background-color: #76c3ff;
+}
+
+.hover-effect-4:hover {
+    border-color: #00d8ff;
+    box-shadow: 0 0 15px #00d8ff;
+    background-color: #76c3ff;
+    transform: rotate(360deg)
+}
+
+/* Эффект для ссылки */
+#demo-hover-link {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #0f3460;
+    color: #00d8ff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    margin: 20px 0;
+}
+
+#demo-hover-link:hover {
+    background-color: #00d8ff;
+    color: #1a1a2e;
+    transform: translateX(10px);  /* сдвиг вправо */
+    box-shadow: 0 5px 15px rgba(0,216,255,0.4);
+}

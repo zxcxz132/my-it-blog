@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="icon" type="image/png" sizes="50x50" href="icon_site_50x50.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой IT-блог</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div>
+        <h1 style="display: flex; align-items: center; justify-content: center; gap: 5px;"><img src="icon_site_50x50.png" alt="">  Мой IT-блог</h1>
+    </div>
+    <div class="section">
+        <h2>Заголовки</h2>
+        <hr>
+        <h3>Почему я выбрал программирование?</h3>
+            <h4>Python</h4>
+            <h4>Javascript</h4>
+            <h4>C++</h4>
+        <h3>Мои проекты</h3>
+            <h4>My Project Python</h4>
+    </div>
+    <hr>
+    <h2>Абзацы и форматирование</h2>
+    <p><b>3 года </b> занимаюсь программированием <i>это очень увлекательно</i></p>
+    <p>мой любимый язык - <b>Python</b>. <span class="highlight">Он отлично подходит для начинающих.</span></p>
+    <p><b>Git</b> - <i>лучшая система контроля версий</i>. <span>Она позволяет отслеживать изменения в коде и
+        работать в команде без страха что то сломать.</span></p>
+    <p><i>Главный навык программиста</i> - <b>отладчик (debugger)</b>. Он позволяет выполнять код по шагам и видеть
+        где именно прячется ошибка</p>
+    <hr>
+    <h2>Картинка с обтеканием</h2>
+    <div class="img-wrap">
+        <img class="float-left" src="images/coding.jpg" alt="Программирование">
+        <p>Программирование развивает логическое мышление и учит решать сложные задачи. Этот текст будет обтекать картинку, потому что мы применим CSS.</p>
+    </div>
+    <div class="img-wrap">
+        <img class="float-right" src="images/testing.jpg" alt="Программирование">
+        <b>Тестирование</b> — <i>неотъемлемая часть разработки</i>.
+        <span>Оно помогает находить ошибки до того, как их увидят пользователи.</span>
+        <b>Юнит-тесты</b> проверяют отдельные функции, а <i>интеграционные</i> — как части системы работают вместе.
+        <span>Без автоматических тестов любой проект превращается в "шатающуюся башню из кода".</span>. 
+    </div>  
+    <hr>
+    <h2>Таблицы</h2>
+    <h3>Таблица расписания</h3>
+    <div style="margin-top:20px; margin-bottom:40px;">
+        <!-- марджин топ и ботом делает отсуп сверху и снизу -->
+        <table border="1" cellspacing="0" cellpadding="10">
+            <!-- cellspacing расстояние между ячейками и селладдинг размер ячеек -->
+            <thead>
+                <tr>
+                    <th>День</th>
+                    <th>Время</th>
+                    <th>Тема</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ПН</td>
+                    <td colspan="1">Выходной (разбор домашних заданий)</td>
+                    <!-- colspan объеденение ячеек по горизронтали -->
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>СР</td>
+                        <td>18:00</td>
+                        <td>HTML+CSS</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">ПТ</td>
+                        <!-- rowspan объеденение ячеек по вертикали -->
+                        <td>16:00</td>
+                        <td>Javascript</td>
+                    </tr>
+                    <tr>
+                        <td>18:00</td>
+                        <td>Git и Github</td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+    <h3>Таблица сравнения языков программирования</h3>
+
+        <table border="1" cellspacing="0" cellpadding="10">
+            <!-- cellspacing расстояние между ячейками и селладдинг размер ячеек -->
+            <thead>
+                <tr>
+                    <th rowspan="2">Язык</th>
+                    <th colspan="2">Характеристики</th>
+                    <th rowspan="2">типизация</th>
+                    <th rowspan="2">Популярность (2025)</th>
+                </tr>
+                <tr>
+                    <th>сложность</th>
+                    <th>скорость</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>python</td>
+                    <td>низкая</td>
+                    <td>Средняя</td>
+                    <td>Динамичсекая</td>
+                    <td>1 место</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Java</td>
+                        <td>Средняя</td>
+                        <td>высокая</td>
+                        <td rowspan="2">Статистически (строгая)</td>
+                        <td rowspan="2">3 место</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">корпоративный стандарт для бэкенда</td>                        
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="5">Чем выше сложность - тем дольше учить, но больше контроля над памятью</td>
+                    </tr>
+                </tbody>
+        </table>
+
+<!-- БЛОЧНАЯ МОДЕЛЬ: пример с padding, margin, background -->
+<h2>Учимся работать с блоками</h2>
+<div class="block-demo">
+    <div class="box box-1">
+        <h3>Блок 1</h3>
+        <p>У этого блока <b>margin: 20px</b> (отступ от соседей) и <b>padding: 10px</b> (внутренний отступ).</p>
+    </div>
+
+    <div class="box box-2">
+        <h3>Блок 2</h3>
+        <p>У этого блока <b>margin: 10px</b> и <b>padding: 25px</b>. Внутренний отступ больше — текст "дышит".</p>
+    </div>
+
+    <div class="box box-3">
+        <h3>Блок 3</h3>
+        <p>У этого блока <b>margin: 30px 10px</b> (верх/низ 30px, право/лево 10px) и <b>padding: 5px 20px</b>.</p>
+    </div>
+</div>
+
+<!-- ID, CLASS и ЭФФЕКТЫ НАВЕДЕНИЯ -->
+<h2>Интерактивные элементы (наведи мышкой)</h2>
+
+<div class="interactive-demo">
+    
+    <!-- Пример с id (уникальный элемент) -->
+    <div id="special-card" class="card">
+        <h3>Уникальная карточка (id="special-card")</h3>
+        <p>У этой карточки есть уникальный идентификатор. На странице такой id может быть только один.</p>
+        <p class="small-note">При наведении меняется фон и размер</p>
+    </div>
+
+    <!-- Пример с class (много одинаковых) -->
+    <div class="card hover-effect-1">
+        <h3>Эффект 1: увеличение</h3>
+        <p>При наведении эта карточка увеличивается на 5%</p>
+    </div>
+
+    <div class="card hover-effect-2">
+        <h3>Эффект 2: смена фона и тень</h3>
+        <p>При наведении появляется тень и меняется цвет фона</p>
+    </div>
+
+    <div class="card hover-effect-3">
+        <h3>Эффект 3: плавное появление рамки</h3>
+        <p>При наведении появляется неоновая рамка</p>
+    </div>
+
+    <div class="card hover-effect-4">
+        <h3>Эффект 4:из под выподверта</h3>
+        <p>При наведении вращается</p>
+    </div>
+
+
+</div>
+
+<!-- Пример ссылки с эффектом наведения -->
+<p class="demo-link">
+    <a href="#" id="demo-hover-link">Наведи на меня курсор →</a>
+</p>
+
+
+</body>
+</html>
