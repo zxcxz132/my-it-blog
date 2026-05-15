@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <a id="top"></a>
     <div>
         <h1 style="display: flex; align-items: center; justify-content: center; gap: 5px;"><img src="icon_site_50x50.png" alt="">  Мой IT-блог</h1>
     </div>
@@ -182,7 +183,7 @@
 </p>
 
 <hr>
-<h2>Мои цели в IT</h2>
+<h2 id="goals">Мои цели в IT</h2>
 <ul>
     <li>выучить JavaScript</li>
     <li>Научится работать с базами данных</li>
@@ -196,6 +197,52 @@
     <li>Либо нажмит на вкладку <b>Commits</b></li>
     <li>Нажми на хэш коммита (например, а1б2в3г4), чтобы увидеть, что именно здесь изменилось</li>
 </ul> 
+
+<Tab><h2>Полезные IT-ресурсы</h2>
+<ul>
+    <li><a href="https://github.com" target="_blank">GitHub — платформа для разработчиков</a></li>
+    <li><a href="https://stackoverflow.com" target="_blank">Stack Overflow — ответы на любые вопросы</a></li>
+    <li><a href="#goals">Мои цели в IT</a> (ссылка на другой раздел страницы)</li>
+    <li><a href="mailto:my.it.email@example.com">Написать мне письмо</a></li>
+</ul>
+</Tab>
+
+<h2>📬 Подпишись на IT-дайджест</h2>
+<form action="#" method="post" class="subscribe-form">
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+    <br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+    <br><br>
+    
+    <label for="tech">Любимая технология:</label>
+    <select id="tech" name="tech">
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+        <option value="html-css">HTML/CSS</option>
+        <option value="java">Java</option>
+    </select>
+    <br><br>
+    
+    <p>Выберите формат рассылки:</p>
+    <input type="radio" id="daily" name="frequency" value="daily">
+    <label for="daily">Ежедневно</label>
+    <input type="radio" id="weekly" name="frequency" value="weekly" checked>
+    <label for="weekly">Раз в неделю</label>
+    <br><br>
+    
+    <input type="checkbox" id="agree" required>
+    <label for="agree">Я согласен получать новости на указанный email</label>
+    <br><br>
+    
+    <button type="submit">Подписаться</button>
+</form>
+
+<p style="text-align: center; margin-top: 40px;">
+    <a href="#top" class="up-button">⬆ Наверх страницы</a>
+</p>
 
 </body>
 </html>
